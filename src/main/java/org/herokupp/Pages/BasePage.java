@@ -13,6 +13,11 @@ public class BasePage {
 
     @FindBy(xpath = "//a[text()='Add/Remove Elements']")
     public WebElement addRemoveElement;
+
+    @FindBy(xpath = "//a[text()='Basic Auth']")
+    public WebElement basicAuth;
+
+
     public BasePage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
@@ -23,5 +28,9 @@ public class BasePage {
 
     public void visitAddRemoveElement(){
         addRemoveElement.click();
+    }
+
+    public void visitBasicAuth(){
+        basicAuth.click();
     }
 }
