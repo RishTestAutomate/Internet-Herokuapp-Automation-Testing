@@ -14,8 +14,8 @@ public class BasePage {
     @FindBy(xpath = "//a[text()='Add/Remove Elements']")
     public WebElement addRemoveElement;
 
-    @FindBy(xpath = "//a[text()='Basic Auth']")
-    public WebElement basicAuth;
+    @FindBy(xpath = "//a[text()='Broken Images']")
+    public WebElement brokenImage;
 
 
     public BasePage(WebDriver driver) {
@@ -30,7 +30,7 @@ public class BasePage {
         addRemoveElement.click();
     }
 
-    public void visitBasicAuth(){
-        basicAuth.click();
+    public void visitBrokenImage(){
+        brokenImage.click();
     }
 }
