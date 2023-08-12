@@ -1,12 +1,10 @@
 package org.herokupp.PageTests;
 
 import Utilities.Utils;
-import org.herokupp.Pages.DigestAuthenticationPage;
 import org.herokupp.Pages.DisappearingElementsPage;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -50,5 +48,5 @@ public class DisappearingElementsTests {
 
         System.out.println("The disappearing elements disappeared "+count+" times in 10 page reload.");
     }
-    
+
 }

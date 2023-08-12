@@ -28,6 +28,12 @@ public class BasePage {
     @FindBy(xpath = "//a[text()='Disappearing Elements']")
     public WebElement disappearingElements;
 
+    @FindBy(xpath = "//a[text()='Drag and Drop']")
+    public WebElement dragAndDrop;
+
+    @FindBy(xpath = "//a[text()='Dropdown]")
+    public WebElement dropdown;
+
 
     public BasePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -61,5 +67,13 @@ public class BasePage {
 
     public void visitDisappearingElements(){
         disappearingElements.click();
+    }
+
+    public void visitDragAndDrop(){
+        dragAndDrop.click();
+    }
+
+    public void visitDropdown(){
+        dropdown.click();
     }
 }
