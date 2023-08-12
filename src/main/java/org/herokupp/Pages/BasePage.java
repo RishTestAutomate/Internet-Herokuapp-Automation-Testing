@@ -22,6 +22,12 @@ public class BasePage {
     @FindBy(xpath = "//a[text()='Context Menu']")
     public WebElement contextMenu;
 
+    @FindBy(xpath = "//a[text()='Digest Authentication']")
+    public WebElement digestAuthentication;
+
+    @FindBy(xpath = "//a[text()='Disappearing Elements']")
+    public WebElement disappearingElements;
+
 
     public BasePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -47,5 +53,13 @@ public class BasePage {
 
     public void visitContextMenu(){
         contextMenu.click();
+    }
+
+    public void visitDigestAuthentication(){
+        digestAuthentication.click();
+    }
+
+    public void visitDisappearingElements(){
+        disappearingElements.click();
     }
 }
