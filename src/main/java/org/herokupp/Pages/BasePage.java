@@ -17,6 +17,15 @@ public class BasePage {
     @FindBy(xpath = "//a[text()='Broken Images']")
     public WebElement brokenImage;
 
+    @FindBy(xpath = "//a[text()='Challenging DOM']")
+    public WebElement challengingDom;
+
+    @FindBy(xpath = "//a[text()='Checkboxes']")
+    public WebElement checkboxes;
+
+    @FindBy(xpath = "//a[text()='Context Menu']")
+    public WebElement contextMenu;
+
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
@@ -32,5 +41,17 @@ public class BasePage {
 
     public void visitBrokenImage(){
         brokenImage.click();
+    }
+
+    public void visitChallengingDom(){
+        challengingDom.click();
+    }
+
+    public void visitCheckboxes(){
+        checkboxes.click();
+    }
+
+    public void visitContextMenu(){
+        contextMenu.click();
     }
 }
