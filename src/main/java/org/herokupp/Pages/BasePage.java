@@ -31,8 +31,11 @@ public class BasePage {
     @FindBy(xpath = "//a[text()='Drag and Drop']")
     public WebElement dragAndDrop;
 
-    @FindBy(xpath = "//a[text()='Dropdown]")
+    @FindBy(xpath = "//a[text()='Dropdown']")
     public WebElement dropdown;
+
+    @FindBy(xpath = "//a[text()='Dynamic Content']")
+    public WebElement dynamicContent;
 
 
     public BasePage(WebDriver driver) {
@@ -75,5 +78,9 @@ public class BasePage {
 
     public void visitDropdown(){
         dropdown.click();
+    }
+
+    public void visitDynamicContent(){
+        dynamicContent.click();
     }
 }
