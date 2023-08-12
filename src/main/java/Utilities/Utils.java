@@ -1,11 +1,12 @@
 package Utilities;
 
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 
 public class Utils {
@@ -43,6 +44,21 @@ public class Utils {
             Thread.sleep(milliSeconds);
         }
         catch (InterruptedException e){
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public void waitUntilIsDisplayed(WebElement element){
+        webDriverWait.until(ExpectedConditions.visibilityOf(element));
+    }
+
+    public void takeScreenshot(String destinationPath, String fileName){
+        File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        File destinationFile = new File(destinationPath, fileName);
+        try {
+            FileUtils.copyFile(screenshotFile, destinationFile);
+        }
+        catch (IOException e){
             System.out.println(e.getMessage());
         }
     }
