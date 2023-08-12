@@ -37,6 +37,9 @@ public class BasePage {
     @FindBy(xpath = "//a[text()='Dynamic Content']")
     public WebElement dynamicContent;
 
+    @FindBy(xpath = "//a[text()='Dynamic Controls']")
+    public WebElement dynamicControls;
+
 
     public BasePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -82,5 +85,9 @@ public class BasePage {
 
     public void visitDynamicContent(){
         dynamicContent.click();
+    }
+
+    public void visitDynamicControl(){
+        dynamicControls.click();
     }
 }
