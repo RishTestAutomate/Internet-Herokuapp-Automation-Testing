@@ -60,6 +60,8 @@ public class BasePage {
 
     @FindBy(xpath = "//a[text()='Forgot Password']")
     public WebElement forgotPassword;
+    @FindBy(xpath = "//a[text()='Form Authentication']")
+    public WebElement formAuthentication;
 
 
     public BasePage(WebDriver driver) {
@@ -136,5 +138,8 @@ public class BasePage {
 
     public void visitForgotPassword(){
         forgotPassword.click();
+    }
+    public void visitFormAuthentication(){
+        formAuthentication.click();
     }
 }
