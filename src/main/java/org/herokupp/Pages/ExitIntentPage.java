@@ -3,21 +3,17 @@ package org.herokupp.Pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-public class EntryAdPage extends BasePage{
+public class ExitIntentPage extends BasePage{
 
-    @FindBy(id = "restart-ad")
-    public WebElement restartAdButton;
-    @FindBy(id = "modal")
+    @FindBy(id = "ouibounce-modal")
     public WebElement adPopupDiv;
+    @FindBy(tagName = "h3")
+    public WebElement exitIntentText;
 
     @FindBy(xpath = "//p[text()='Close']")
     public WebElement closeAdButton;
-
-
-    public EntryAdPage(WebDriver driver) {
+    public ExitIntentPage(WebDriver driver) {
         super(driver);
-        PageFactory.initElements(driver, this);
     }
 }

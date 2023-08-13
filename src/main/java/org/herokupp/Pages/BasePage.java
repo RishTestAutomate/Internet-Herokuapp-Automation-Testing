@@ -46,6 +46,9 @@ public class BasePage {
     @FindBy(xpath = "//a[text()='Entry Ad']")
     public WebElement entryAd;
 
+    @FindBy(xpath = "//a[text()='Exit Intent']")
+    public WebElement exitIntent;
+
 
     public BasePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -103,5 +106,9 @@ public class BasePage {
 
     public void visitEntryAd(){
         entryAd.click();
+    }
+
+    public void visitExitIntent(){
+        exitIntent.click();
     }
 }
