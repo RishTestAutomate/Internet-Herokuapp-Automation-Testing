@@ -52,6 +52,9 @@ public class BasePage {
     @FindBy(xpath = "//a[text()='File Download']")
     public WebElement fileDownload;
 
+    @FindBy(xpath = "//a[text()='File Upload']")
+    public WebElement fileUpload;
+
 
     public BasePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -116,5 +119,9 @@ public class BasePage {
     }
     public void visitFileDownload(){
         fileDownload.click();
+    }
+
+    public void visitFileUpload(){
+        fileUpload.click();
     }
 }
