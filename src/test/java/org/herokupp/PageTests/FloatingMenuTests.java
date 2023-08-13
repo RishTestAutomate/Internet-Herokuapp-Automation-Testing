@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 public class FloatingMenuTests {
     WebDriver driver;
 
-FloatingMenuPage floatingMenuPage;
+    FloatingMenuPage floatingMenuPage;
     Utils utils;
     JavascriptExecutor jse;
     @BeforeMethod

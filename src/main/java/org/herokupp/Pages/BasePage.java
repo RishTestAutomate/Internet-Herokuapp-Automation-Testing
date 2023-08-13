@@ -58,6 +58,9 @@ public class BasePage {
     @FindBy(xpath = "//a[text()='Floating Menu']")
     public WebElement floatingMenu;
 
+    @FindBy(xpath = "//a[text()='Forgot Password']")
+    public WebElement forgotPassword;
+
 
     public BasePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -129,5 +132,9 @@ public class BasePage {
     }
     public void visitFloatingMenu(){
         floatingMenu.click();
+    }
+
+    public void visitForgotPassword(){
+        forgotPassword.click();
     }
 }
