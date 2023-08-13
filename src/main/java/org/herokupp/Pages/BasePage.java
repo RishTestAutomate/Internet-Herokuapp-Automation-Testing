@@ -49,6 +49,9 @@ public class BasePage {
     @FindBy(xpath = "//a[text()='Exit Intent']")
     public WebElement exitIntent;
 
+    @FindBy(xpath = "//a[text()='File Download']")
+    public WebElement fileDownload;
+
 
     public BasePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -110,5 +113,8 @@ public class BasePage {
 
     public void visitExitIntent(){
         exitIntent.click();
+    }
+    public void visitFileDownload(){
+        fileDownload.click();
     }
 }
