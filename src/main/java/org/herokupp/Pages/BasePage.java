@@ -43,6 +43,9 @@ public class BasePage {
     @FindBy(xpath = "//a[text()='Dynamic Loading']")
     public WebElement dynamicLoading;
 
+    @FindBy(xpath = "//a[text()='Entry Ad']")
+    public WebElement entryAd;
+
 
     public BasePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -96,5 +99,9 @@ public class BasePage {
 
     public void visitDynamicLoading(){
         dynamicLoading.click();
+    }
+
+    public void visitEntryAd(){
+        entryAd.click();
     }
 }
