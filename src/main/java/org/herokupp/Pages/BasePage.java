@@ -55,6 +55,9 @@ public class BasePage {
     @FindBy(xpath = "//a[text()='File Upload']")
     public WebElement fileUpload;
 
+    @FindBy(xpath = "//a[text()='Floating Menu']")
+    public WebElement floatingMenu;
+
 
     public BasePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -123,5 +126,8 @@ public class BasePage {
 
     public void visitFileUpload(){
         fileUpload.click();
+    }
+    public void visitFloatingMenu(){
+        floatingMenu.click();
     }
 }
