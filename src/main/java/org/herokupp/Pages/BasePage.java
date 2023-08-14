@@ -68,6 +68,9 @@ public class BasePage {
    @FindBy(xpath = "//a[text()='Geolocation']")
     public WebElement geoLocation;
 
+   @FindBy(xpath = "//a[text()='Horizontal Slider']")
+    public WebElement horizontalSlider;
+
 
     public BasePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -154,5 +157,8 @@ public class BasePage {
 
     public void visitGeolocation(){
         geoLocation.click();
+    }
+    public void visitHorizontalSlider(){
+        horizontalSlider.click();
     }
 }
