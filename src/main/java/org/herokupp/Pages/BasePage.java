@@ -71,6 +71,9 @@ public class BasePage {
    @FindBy(xpath = "//a[text()='Horizontal Slider']")
     public WebElement horizontalSlider;
 
+   @FindBy(xpath = "//a[text()='Hovers']")
+    public WebElement hovers;
+
 
     public BasePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -160,5 +163,9 @@ public class BasePage {
     }
     public void visitHorizontalSlider(){
         horizontalSlider.click();
+    }
+
+    public void visitHovers(){
+        hovers.click();
     }
 }
