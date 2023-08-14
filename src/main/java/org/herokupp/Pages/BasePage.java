@@ -63,6 +63,9 @@ public class BasePage {
     @FindBy(xpath = "//a[text()='Form Authentication']")
     public WebElement formAuthentication;
 
+    @FindBy(xpath = "//a[text()='Frames']")
+    public WebElement frames;
+
 
     public BasePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -141,5 +144,9 @@ public class BasePage {
     }
     public void visitFormAuthentication(){
         formAuthentication.click();
+    }
+
+    public void visitFrames(){
+        frames.click();
     }
 }
