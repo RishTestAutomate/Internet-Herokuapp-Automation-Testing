@@ -1,11 +1,14 @@
 package org.herokupp.PageTests;
 
 import org.herokupp.Pages.FormAuthenticationPage;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
-public class FormAuthenticationTests extends BaseTests{
+public class FormAuthenticationTests{
+    WebDriver driver;
     FormAuthenticationPage formAuthenticationPage;
 
     WebElement username , password , login , errorMessage , logout ;
@@ -13,6 +16,7 @@ public class FormAuthenticationTests extends BaseTests{
     String user , pass ;
     @BeforeMethod
     public void setUpMethod(){
+        driver = new ChromeDriver();
         formAuthenticationPage = new FormAuthenticationPage(driver);
         formAuthenticationPage.visitFormAuthentication();
         username = formAuthenticationPage.usernameTextBox;
@@ -24,7 +28,10 @@ public class FormAuthenticationTests extends BaseTests{
         pass = "SuperSecretPassword!";
     }
 
-
+    @AfterMethod
+    public void tearDown(){
+        driver.quit();
+    }
     @Test
     public void TC01_VerifyLoginFailureForEmptyUsername(){
         username.sendKeys("");

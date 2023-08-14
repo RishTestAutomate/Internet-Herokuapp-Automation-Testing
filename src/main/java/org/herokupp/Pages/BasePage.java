@@ -65,6 +65,8 @@ public class BasePage {
 
     @FindBy(xpath = "//a[text()='Frames']")
     public WebElement frames;
+   @FindBy(xpath = "//a[text()='Geolocation']")
+    public WebElement geoLocation;
 
 
     public BasePage(WebDriver driver) {
@@ -148,5 +150,9 @@ public class BasePage {
 
     public void visitFrames(){
         frames.click();
+    }
+
+    public void visitGeolocation(){
+        geoLocation.click();
     }
 }
