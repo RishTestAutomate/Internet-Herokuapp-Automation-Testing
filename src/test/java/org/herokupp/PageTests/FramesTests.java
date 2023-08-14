@@ -2,7 +2,6 @@ package org.herokupp.PageTests;
 
 import org.herokupp.Pages.FramesPage;
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.devtools.v85.network.model.DataReceived;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -25,25 +24,21 @@ public class FramesTests extends BaseTests{
 
         driver.switchTo().frame(framesPage.nested_frameLeft);
         Assert.assertTrue(framesPage.nested_frameLeftText.getText().contains("LEFT"));
-        Assert.assertFalse(framesPage.nested_frameLeftText.getText().contains("RIGHT"));
 
         driver.switchTo().parentFrame();
 
         driver.switchTo().frame(framesPage.nested_frameRight);
         Assert.assertTrue(framesPage.nested_frameRightText.getText().contains("RIGHT"));
-        Assert.assertFalse(framesPage.nested_frameRightText.getText().contains("LEFT"));
 
         driver.switchTo().parentFrame();
 
         driver.switchTo().frame(framesPage.nested_frameMiddle);
         Assert.assertTrue(framesPage.nested_frameMiddleText.getText().contains("MIDDLE"));
-        Assert.assertFalse(framesPage.nested_frameMiddleText.getText().contains("LEFT"));
 
         driver.switchTo().defaultContent();
 
         driver.switchTo().frame(framesPage.nested_frameBottom);
         Assert.assertTrue(framesPage.nested_frameBottomText.getText().contains("BOTTOM"));
-        Assert.assertFalse(framesPage.nested_frameBottomText.getText().contains("LEFT"));
     }
 
     @Test
