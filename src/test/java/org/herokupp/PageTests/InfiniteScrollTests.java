@@ -3,7 +3,6 @@ package org.herokupp.PageTests;
 import Utilities.Utils;
 import org.herokupp.Pages.InfiniteScrollPage;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -38,5 +37,5 @@ public class InfiniteScrollTests {
         System.out.println(scrollHeight);
         Assert.assertNotEquals(scrollHeight, newScrollHeight, "Content still loading after scrolling.");
     }
-    
+
 }

@@ -78,6 +78,10 @@ public class BasePage {
     public WebElement infiniteScroll;
 
 
+   @FindBy(xpath = "//a[text()='Inputs']")
+    public WebElement inputs;
+
+
     public BasePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
         driver.manage().window().maximize();
@@ -174,5 +178,9 @@ public class BasePage {
 
     public void visitInfiniteScroll(){
         infiniteScroll.click();
+    }
+
+    public void visitInputs(){
+        inputs.click();
     }
 }
