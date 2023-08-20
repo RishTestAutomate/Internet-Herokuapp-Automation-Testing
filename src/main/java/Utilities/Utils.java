@@ -73,4 +73,10 @@ public class Utils {
     public int getCurrentScrollHeight() {
         return ((Number) jse.executeScript("return document.body.scrollHeight")).intValue();
     }
+
+    public boolean checkFilePresence(String fileName){
+        String filePath = "C:/Users/THINKPAD/Downloads"+"/"+fileName;
+        File file = new File(filePath);
+        return file.exists() && file.isFile();
+    }
 }

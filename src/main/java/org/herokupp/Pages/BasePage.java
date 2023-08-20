@@ -103,6 +103,9 @@ public class BasePage {
     @FindBy(xpath = "//a[text()='Redirect Link']")
     public WebElement redirectLink;
 
+    @FindBy(xpath = "//a[text()='Secure File Download']")
+    public WebElement secureFileDownload;
+
 
     public BasePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -234,5 +237,9 @@ public class BasePage {
 
     public void visitRedirectLink(){
         redirectLink.click();
+    }
+
+    public void visitSecureFileDownload(){
+        secureFileDownload.click();
     }
 }
