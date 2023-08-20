@@ -74,6 +74,9 @@ public class BasePage {
    @FindBy(xpath = "//a[text()='Hovers']")
     public WebElement hovers;
 
+   @FindBy(xpath = "//a[text()='Infinite Scroll']")
+    public WebElement infiniteScroll;
+
 
     public BasePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -167,5 +170,9 @@ public class BasePage {
 
     public void visitHovers(){
         hovers.click();
+    }
+
+    public void visitInfiniteScroll(){
+        infiniteScroll.click();
     }
 }

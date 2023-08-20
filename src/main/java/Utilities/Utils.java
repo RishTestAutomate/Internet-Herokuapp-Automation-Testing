@@ -62,4 +62,15 @@ public class Utils {
             System.out.println(e.getMessage());
         }
     }
+
+    public void scrollDownBy(int scrollCount) {
+        for (int i = 0; i < scrollCount; i++) {
+            jse.executeScript("window.scrollTo(0, document.body.scrollHeight);");
+            wait(1000);
+        }
+    }
+
+    public int getCurrentScrollHeight() {
+        return ((Number) jse.executeScript("return document.body.scrollHeight")).intValue();
+    }
 }
