@@ -92,6 +92,9 @@ public class BasePage {
     @FindBy(xpath = "//a[text()='Key Presses']")
     public WebElement keyPresses;
 
+    @FindBy(xpath = "//a[text()='Large & Deep DOM']")
+    public WebElement largeAndDeepDom;
+
 
     public BasePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -207,5 +210,9 @@ public class BasePage {
 
     public void visitKeyPresses(){
         keyPresses.click();
+    }
+
+    public void visitLargeDeepDom(){
+        largeAndDeepDom.click();
     }
 }
