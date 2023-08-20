@@ -97,6 +97,8 @@ public class BasePage {
 
     @FindBy(xpath = "//a[text()='Multiple Windows']")
     public WebElement multipleWindows;
+    @FindBy(xpath = "//a[text()='Notification Messages']")
+    public WebElement notificationMessage;
 
 
     public BasePage(WebDriver driver) {
@@ -221,5 +223,9 @@ public class BasePage {
 
     public void visitMultipleWindows(){
         multipleWindows.click();
+    }
+
+    public void visitNotificationMessages(){
+        notificationMessage.click();
     }
 }
