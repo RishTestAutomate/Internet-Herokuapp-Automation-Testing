@@ -100,6 +100,9 @@ public class BasePage {
     @FindBy(xpath = "//a[text()='Notification Messages']")
     public WebElement notificationMessage;
 
+    @FindBy(xpath = "//a[text()='Redirect Link']")
+    public WebElement redirectLink;
+
 
     public BasePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -227,5 +230,9 @@ public class BasePage {
 
     public void visitNotificationMessages(){
         notificationMessage.click();
+    }
+
+    public void visitRedirectLink(){
+        redirectLink.click();
     }
 }
