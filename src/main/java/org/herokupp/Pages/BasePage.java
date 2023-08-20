@@ -77,9 +77,11 @@ public class BasePage {
    @FindBy(xpath = "//a[text()='Infinite Scroll']")
     public WebElement infiniteScroll;
 
-
    @FindBy(xpath = "//a[text()='Inputs']")
     public WebElement inputs;
+
+   @FindBy(xpath = "//a[text()='JQuery UI Menus']")
+    public WebElement jQueryUIMenus;
 
 
     public BasePage(WebDriver driver) {
@@ -182,5 +184,8 @@ public class BasePage {
 
     public void visitInputs(){
         inputs.click();
+    }
+    public void visitJQueryUIMenus(){
+        jQueryUIMenus.click();
     }
 }
