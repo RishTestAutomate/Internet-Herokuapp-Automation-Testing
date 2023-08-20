@@ -3,7 +3,6 @@ package org.herokupp.Pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 public class FileUploadPage extends BasePage{
 
@@ -22,6 +21,5 @@ public class FileUploadPage extends BasePage{
 
     public FileUploadPage(WebDriver driver) {
         super(driver);
-        PageFactory.initElements(driver, this);
     }
 }

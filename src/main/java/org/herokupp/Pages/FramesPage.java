@@ -43,6 +43,5 @@ public class FramesPage extends BasePage{
 
     public FramesPage(WebDriver driver) {
         super(driver);
-        PageFactory.initElements(driver,this);
     }
 }
