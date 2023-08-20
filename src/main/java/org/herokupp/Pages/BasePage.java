@@ -95,6 +95,9 @@ public class BasePage {
     @FindBy(xpath = "//a[text()='Large & Deep DOM']")
     public WebElement largeAndDeepDom;
 
+    @FindBy(xpath = "//a[text()='Multiple Windows']")
+    public WebElement multipleWindows;
+
 
     public BasePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -214,5 +217,9 @@ public class BasePage {
 
     public void visitLargeDeepDom(){
         largeAndDeepDom.click();
+    }
+
+    public void visitMultipleWindows(){
+        multipleWindows.click();
     }
 }
