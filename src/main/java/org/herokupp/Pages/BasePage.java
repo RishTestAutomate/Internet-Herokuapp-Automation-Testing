@@ -86,6 +86,12 @@ public class BasePage {
     @FindBy(xpath = "//a[text()='JavaScript Alerts']")
     public WebElement javascriptAlerts;
 
+    @FindBy(xpath = "//a[text()='JavaScript onload event error']")
+    public WebElement javascriptOnload;
+
+    @FindBy(xpath = "//a[text()='Key Presses']")
+    public WebElement keyPresses;
+
 
     public BasePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -194,5 +200,12 @@ public class BasePage {
 
     public void visitJavascriptAlerts(){
         javascriptAlerts.click();
+    }
+    public void visitJavascriptOnload(){
+        javascriptOnload.click();
+    }
+
+    public void visitKeyPresses(){
+        keyPresses.click();
     }
 }

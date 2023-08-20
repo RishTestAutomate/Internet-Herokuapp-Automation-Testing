@@ -1,12 +1,8 @@
 package org.herokupp.PageTests;
 
-import Utilities.Utils;
-import org.herokupp.Pages.JQueryUIMenusPage;
 import org.herokupp.Pages.JavascriptAlertsPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -20,9 +16,7 @@ public class JavascriptAlertsTests {
 
     @BeforeMethod
     public void setUp(){
-        ChromeOptions co = new ChromeOptions();
-        co.addArguments("disable-notifications");
-        driver = new ChromeDriver(co);
+        driver = new ChromeDriver();
         javascriptAlertsPage = new JavascriptAlertsPage(driver);
         javascriptAlertsPage.visitJavascriptAlerts();
     }
