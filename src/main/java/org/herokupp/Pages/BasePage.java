@@ -65,23 +65,26 @@ public class BasePage {
 
     @FindBy(xpath = "//a[text()='Frames']")
     public WebElement frames;
-   @FindBy(xpath = "//a[text()='Geolocation']")
+    @FindBy(xpath = "//a[text()='Geolocation']")
     public WebElement geoLocation;
 
-   @FindBy(xpath = "//a[text()='Horizontal Slider']")
+    @FindBy(xpath = "//a[text()='Horizontal Slider']")
     public WebElement horizontalSlider;
 
-   @FindBy(xpath = "//a[text()='Hovers']")
+    @FindBy(xpath = "//a[text()='Hovers']")
     public WebElement hovers;
 
-   @FindBy(xpath = "//a[text()='Infinite Scroll']")
+    @FindBy(xpath = "//a[text()='Infinite Scroll']")
     public WebElement infiniteScroll;
 
-   @FindBy(xpath = "//a[text()='Inputs']")
+    @FindBy(xpath = "//a[text()='Inputs']")
     public WebElement inputs;
 
-   @FindBy(xpath = "//a[text()='JQuery UI Menus']")
+    @FindBy(xpath = "//a[text()='JQuery UI Menus']")
     public WebElement jQueryUIMenus;
+
+    @FindBy(xpath = "//a[text()='JavaScript Alerts']")
+    public WebElement javascriptAlerts;
 
 
     public BasePage(WebDriver driver) {
@@ -187,5 +190,9 @@ public class BasePage {
     }
     public void visitJQueryUIMenus(){
         jQueryUIMenus.click();
+    }
+
+    public void visitJavascriptAlerts(){
+        javascriptAlerts.click();
     }
 }
