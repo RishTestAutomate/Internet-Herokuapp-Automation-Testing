@@ -106,6 +106,12 @@ public class BasePage {
     @FindBy(xpath = "//a[text()='Secure File Download']")
     public WebElement secureFileDownload;
 
+    @FindBy(xpath = "//a[text()='Shadow DOM']")
+    public WebElement shadowDom;
+
+    @FindBy(xpath = "//a[text()='Shifting Content']")
+    public WebElement shiftingContent;
+
 
     public BasePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -241,5 +247,11 @@ public class BasePage {
 
     public void visitSecureFileDownload(){
         secureFileDownload.click();
+    }
+    public void visitShadowDom(){
+        shadowDom.click();
+    }
+    public void visitShiftingContent(){
+        shiftingContent.click();
     }
 }
