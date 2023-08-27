@@ -79,4 +79,21 @@ public class Utils {
         File file = new File(filePath);
         return file.exists() && file.isFile();
     }
+
+    public boolean isDisplayed(WebElement element){
+        try{
+            return element.isDisplayed();
+        }
+        catch (NoSuchElementException e){
+            return false;
+        }
+    }
+    public boolean isEnabled(WebElement element){
+        try{
+            return element.isEnabled();
+        }
+        catch (NoSuchElementException e){
+            return false;
+        }
+    }
 }

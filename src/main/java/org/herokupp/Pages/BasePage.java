@@ -112,6 +112,9 @@ public class BasePage {
     @FindBy(xpath = "//a[text()='Shifting Content']")
     public WebElement shiftingContent;
 
+    @FindBy(xpath = "//a[text()='WYSIWYG Editor']")
+    public WebElement editor;
+
 
     public BasePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -253,5 +256,8 @@ public class BasePage {
     }
     public void visitShiftingContent(){
         shiftingContent.click();
+    }
+    public void visitEditor(){
+        editor.click();
     }
 }
