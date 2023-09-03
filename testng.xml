@@ -1,0 +1,78 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Heroku App Tests">
+    <listeners>
+    <listener class-name="org.testng.reporters.XMLReporter" />
+    <listener class-name="org.testng.reporters.EmailableReporter" />
+    <listener class-name="io.qameta.allure.testng.AllureTestNg" />
+    </listeners>
+
+    <test name="Login Test">
+        <classes>
+            <class name="org.herokuapp.PageTests.BasicAuthTests" />
+            <class name="org.herokuapp.PageTests.DigestAuthenticationTests" />
+            <class name="org.herokuapp.PageTests.FormAuthenticationTests" />
+        </classes>
+    </test>
+
+    <test name="Element Test">
+        <classes>
+            <class name="org.herokuapp.PageTests.AddRemoveElementsTests" />
+            <class name="org.herokuapp.PageTests.BrokenImageTests" />
+            <class name="org.herokuapp.PageTests.CheckboxesTests" />
+            <class name="org.herokuapp.PageTests.ContextMenuTests" />
+            <class name="org.herokuapp.PageTests.DropdownTests" />
+            <class name="org.herokuapp.PageTests.DisappearingElementsTests" />
+            <class name="org.herokuapp.PageTests.EntryAdTests" />
+            <class name="org.herokuapp.PageTests.ExitIntentTests" />
+            <class name="org.herokuapp.PageTests.FloatingMenuTests" />
+            <class name="org.herokuapp.PageTests.ForgotPasswordTests" />
+            <class name="org.herokuapp.PageTests.FramesTests" />
+            <class name="org.herokuapp.PageTests.GeolocationTests" />
+            <class name="org.herokuapp.PageTests.HorizontalTests" />
+            <class name="org.herokuapp.PageTests.InputsTests" />
+            <class name="org.herokuapp.PageTests.ShiftingContentTests" />
+        </classes>
+    </test>
+
+
+    <test name="DOM Test">
+        <classes>
+            <class name="org.herokuapp.PageTests.ChallengingDomTests" />
+            <class name="org.herokuapp.PageTests.LargeAndDeepDomTests" />
+            <class name="org.herokuapp.PageTests.ShadowDOMTests" />
+        </classes>
+    </test>
+
+    <test name="Events Test">
+        <classes>
+            <class name="org.herokuapp.PageTests.DragAndDropTests" />
+            <class name="org.herokuapp.PageTests.HoversTests" />
+            <class name="org.herokuapp.PageTests.InfiniteScrollTests" />
+            <class name="org.herokuapp.PageTests.JavascriptAlertsTests" />
+            <class name="org.herokuapp.PageTests.JavascriptOnloadTests" />
+            <class name="org.herokuapp.PageTests.JQueryUIMenusTests" />
+            <class name="org.herokuapp.PageTests.KeyPressesTests" />
+            <class name="org.herokuapp.PageTests.MultipleWindowsTests" />
+            <class name="org.herokuapp.PageTests.NotificationMessageTests" />
+            <class name="org.herokuapp.PageTests.RedirectLinkTests" />
+        </classes>
+    </test>
+
+
+    <test name="Dynamic Test">
+        <classes>
+            <class name="org.herokuapp.PageTests.DynamicContentTests" />
+            <class name="org.herokuapp.PageTests.DynamicControlsTest" />
+            <class name="org.herokuapp.PageTests.DynamicLoadingTests" />
+            <class name="org.herokuapp.PageTests.WYEditorTests" />
+        </classes>
+    </test>
+
+    <test name="File Test">
+        <classes>
+            <class name="org.herokuapp.PageTests.FileDownloadTests" />
+            <class name="org.herokuapp.PageTests.FileUploadTests" />
+            <class name="org.herokuapp.PageTests.SecureFileDownloadTests" />
+        </classes>
+    </test>
+</suite>
