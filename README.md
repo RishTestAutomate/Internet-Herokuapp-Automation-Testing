@@ -8,7 +8,7 @@ The project follows a Maven directory structure to manage dependencies and build
 
 **src/main/java:** Contains the Java source code for the Page Objects and utility classes.
 **src/main/resources:** contains data files.
-**src/test/java: **Contains the test scripts written in Java using TestNG annotations.
+**src/test/java:** Contains the test scripts written in Java using TestNG annotations.
 
 **Page Object Model (POM):**
 The project adopts the Page Object Model (POM) design pattern to enhance code maintainability and reusability. Each web page on "the-internet.herokuapp.com" has a corresponding Page Object class. These classes encapsulate the page's elements and actions, making it easier to write and maintain test scripts.
